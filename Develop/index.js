@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const markdown = require('./utils/generateMarkdown');
+const markdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -18,7 +18,7 @@ const questions = () => {
         },        
         {
             type: 'input', 
-            name: 'installation',
+            name: 'install',
             message: 'How do you install your project?',
         },
         {
@@ -57,7 +57,7 @@ const questions = () => {
 
 const init = () => {
     questions ()
-    .then((data) => fs.writeFileSync('README.md', generateMarkdown(data)))
+    .then((data) => fs.writeFileSync('README.md', markdown(data)))
     .then(() => console.log('Successfully created README.md'))
     .catch ((err) => console.error(err));
 }

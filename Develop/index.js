@@ -65,6 +65,7 @@ const init = () => {
 
 // TODO: Create a function to write README file
     // function writeToFile('README.md', generateMarkdown(data)) {}
+    // fs included in promise in init ()
 
 // TODO: Create a function to initialize app
     // Created init () with promise

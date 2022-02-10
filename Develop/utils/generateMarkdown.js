@@ -18,24 +18,24 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  ..* [Installation] (https://github.com/jmaraya1229/README-generator#installation)
-  ..* [Usage]  (https://github.com/jmaraya1229/README-generator#usage)
-  ..* [Contribution] (https://github.com/jmaraya1229/README-generator#contribution)
-  ..* [Questions] (https://github.com/jmaraya1229/README-generator#questions)
+  * [Installation](https://github.com/jmaraya1229/README-generator#installation)
+  * [Usage](https://github.com/jmaraya1229/README-generator#usage)
+  * [Contribution](https://github.com/jmaraya1229/README-generator#contribution)
+  * [Questions](https://github.com/jmaraya1229/README-generator#questions)
 
   ## Installation
-  ${install}
+  ${data.install}
 
   ## Usage
-  ${usage}
+  ${data.usage}
 
   ## Contribuition
-  ${contribution}
+  ${data.contribution}
 
   ## Questions
   Feel free to utilize this app to create a README for your project. Contact me with examples or any questions via the information below:
-  ..* Github: (https://github.com/${github})
-  ..* Email: ${email}
+  * Github: [@${data.github}](https://github.com/${data.github})
+  * Email: ${data.email}
 `;
 }
 

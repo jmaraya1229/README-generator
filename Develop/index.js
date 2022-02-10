@@ -53,19 +53,21 @@ const questions = () => {
             message: 'What is your email?',
         },
     ])
-    .then
-
 };
+
+const init = () => {
+    questions ()
+    .then((data) => fs.writeFileSync('README.md', generateMarkdown(data)))
+    .then(() => console.log('Successfully created README.md'))
+    .catch ((err) => console.error(err));
+}
 
 
 // TODO: Create a function to write README file
-function writeToFile('README.md', generateMarkdown(data) {}
+    // function writeToFile('README.md', generateMarkdown(data)) {}
 
 // TODO: Create a function to initialize app
-function init() => {
-    questions();
-    fs.writeFile()
-}
+    // Created init () with promise
 
 // Function call to initialize app
 init();

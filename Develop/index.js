@@ -37,12 +37,6 @@ const questions = () => {
             message: 'Test instructions:',
         },
         {
-            type: 'list', 
-            name: 'licenses',
-            message: 'Please pick one license for your project',
-            choices: ['MIT', 'GNU General Public License 3.0', 'Apache License 2.0'],
-        },
-        {
             type: 'input', 
             name: 'github',
             message: 'What is your Github username?',
@@ -52,23 +46,22 @@ const questions = () => {
             name: 'email',
             message: 'What is your email?',
         },
+        {
+            type: 'list', 
+            name: 'licenses',
+            message: 'Please pick one license for your project',
+            choices: ['MIT', 'GNU General Public License 3.0', 'Apache License 2.0'],
+        },
     ])
 };
 
+// init function initializes app and creates readme file
 const init = () => {
     questions ()
     .then((data) => fs.writeFileSync('README.md', markdown(data)))
     .then(() => console.log('Successfully created README.md'))
     .catch ((err) => console.error(err));
 }
-
-
-// TODO: Create a function to write README file
-    // function writeToFile('README.md', generateMarkdown(data)) {}
-    // fs included in promise in init ()
-
-// TODO: Create a function to initialize app
-    // Created init () with promise
 
 // Function call to initialize app
 init();

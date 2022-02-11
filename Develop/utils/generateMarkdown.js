@@ -18,10 +18,10 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  * [Installation](https://github.com/jmaraya1229/README-generator#installation)
-  * [Usage](https://github.com/jmaraya1229/README-generator#usage)
-  * [Contribution](https://github.com/jmaraya1229/README-generator#contribution)
-  * [Questions](https://github.com/jmaraya1229/README-generator#questions)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contribution](#contribution)
+  * [Questions](#questions)
 
   ## Installation
   ${data.install}
@@ -29,7 +29,7 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ## Contribuition
+  ## Contribution
   ${data.contribution}
 
   ## Questions

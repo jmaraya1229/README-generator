@@ -50,7 +50,7 @@ const questions = () => {
             type: 'list', 
             name: 'licenses',
             message: 'Please pick one license for your project',
-            choices: ['MIT', 'GNU General Public License 3.0', 'Apache License 2.0'],
+            choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause License', 'BSD 3-Clause License', 'Boost Software License', 'GNU General Public License v2.0', 'Mozilla Public License v2.0'],
         },
     ])
 };

@@ -19,22 +19,22 @@ const questions = () => {
         {
             type: 'input', 
             name: 'install',
-            message: 'How do you install your project?',
+            message: 'If applicable, please include instructions on how to install your project:',
         },
         {
             type: 'input', 
             name: 'usage',
-            message: 'How do you use your project?',
+            message: 'If applicable, please include instruction on how to use your project:',
         },
         {
             type: 'input', 
             name: 'contribution',
-            message: 'Please state who worked on this project:',
+            message: 'If applicable, please instruct how other may contribute to your project:',
         },
         {
             type: 'input', 
             name: 'test',
-            message: 'Test instructions:',
+            message: 'If applicable, please provide instructions on how to test the application:',
         },
         {
             type: 'input', 
@@ -48,9 +48,9 @@ const questions = () => {
         },
         {
             type: 'list', 
-            name: 'licenses',
-            message: 'Please pick one license for your project',
-            choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause License', 'BSD 3-Clause License', 'Boost Software License', 'GNU General Public License v2.0', 'Mozilla Public License v2.0'],
+            name: 'license',
+            message: 'Please pick one license for your project:',
+            choices: ['Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause License'],
         },
     ])
 };

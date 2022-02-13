@@ -28,7 +28,7 @@ const questions = () => {
         },
         {
             type: 'input', 
-            name: 'contribution',
+            name: 'contributing',
             message: 'If applicable, if you would like other developers to contribute to your project, please include guidelines for how to do so:',
         },
         {

@@ -62,8 +62,8 @@ function generateMarkdown(data) {
     tempToC += `\n* [Usage](#usage)`
   };
 
-  if (data.contribution !== '') {
-    tempToC += `\n* [Contribution](#contribution)`
+  if (data.contributing !== '') {
+    tempToC += `\n* [Contributing](#contributing)`
   };
 
   if (data.test !== '') {
@@ -103,10 +103,10 @@ function generateMarkdown(data) {
       \n${data.usage}\n`
   };
 
-  if (data.contribution !== '') {
+  if (data.contributing !== '') {
     tempmd += 
-      `\n## Contribution
-      \n${data.contribution}\n`
+      `\n## Contributing
+      \n${data.contributing}\n`
   };
 
   if (data.test !== '') {

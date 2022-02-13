@@ -23,16 +23,16 @@ function renderLicenseBadge(data) {
 // If there is no license, return an empty string
 function renderLicenseLink(data) {
   if (data.license !== '' && data.license == 'Apache License 2.0') {
-    return `\n[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)`;
+    return `\n[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)\n`;
 
   } else if (data.license !== '' && data.license == 'GNU General Public License v3.0') {
-    return `\n[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0)`;
+    return `\n[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0)\n`;
 
   } else if (data.license !== '' && data.license == 'MIT License') {
-    return `\n[MIT License](https://opensource.org/licenses/MIT)`;
+    return `\n[MIT License](https://opensource.org/licenses/MIT)\n`;
 
   } else if (data.license !== '' && data.license == 'BSD 2-Clause License') {
-    return `\n[BSD 2-Clause License](https://opensource.org/licenses/BSD-2-Clause)`;
+    return `\n[BSD 2-Clause License](https://opensource.org/licenses/BSD-2-Clause)\n`;
 
   } else {
      return '';
@@ -83,38 +83,36 @@ function generateMarkdown(data) {
   if (data.description !== '') {
     tempmd += 
     `\n## Description
-    \n${data.description}
-    \n`
+    \n${data.description}\n`
     }
   
-  tempmd += tempToC;
+  let contact = `\n* [Questions](#questions)`;
+  tempToC += contact;
+
+  tempmd += tempToC + `\n`;
 
   if (data.install !== '') {
     tempmd += 
       `\n## Installation
-      \n${data.install}
-      \n`
+      \n${data.install}\n`
   };
 
   if (data.usage !== '') {
     tempmd += 
       `\n## Usage
-      \n${data.usage}
-      \n`
+      \n${data.usage}\n`
   };
 
   if (data.contribution !== '') {
     tempmd += 
       `\n## Contribution
-      \n${data.contribution}
-      \n`
+      \n${data.contribution}\n`
   };
 
   if (data.test !== '') {
     tempmd += 
       `\n## Tests
-      \n${data.test}
-      \n`
+      \n${data.test}\n`
   };
 
   if (data.license !== '') {

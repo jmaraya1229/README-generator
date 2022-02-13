@@ -29,12 +29,12 @@ const questions = () => {
         {
             type: 'input', 
             name: 'contribution',
-            message: 'If applicable, please instruct how other may contribute to your project:',
+            message: 'If applicable, if you would like other developers to contribute to your project, please include guidelines for how to do so:',
         },
         {
             type: 'input', 
             name: 'test',
-            message: 'If applicable, please provide instructions on how to test the application:',
+            message: 'If applicable, please provide instructions and examples on how to test your project:',
         },
         {
             type: 'input', 

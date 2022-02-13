@@ -1,6 +1,9 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-
+/**
+ * Returns a license badge based on which license is passed in. 
+ * If there is no license, return an empty string
+ * @param {*} data user input
+ * @returns license badge
+ */
 function renderLicenseBadge(data) {
   if (data.license !== '' && data.license == 'Apache License 2.0') {
     return `\n[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)\n`;
@@ -19,8 +22,11 @@ function renderLicenseBadge(data) {
   } 
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+/**
+ * Returns license link. If there is no license, return an empty string
+ * @param {*} data user input
+ * @returns license link
+ */
 function renderLicenseLink(data) {
   if (data.license !== '' && data.license == 'Apache License 2.0') {
     return `\n[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)\n`;
@@ -39,8 +45,12 @@ function renderLicenseLink(data) {
   } 
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+/**
+ * Returns the license section of README. 
+ * If there is no license, return an empty string
+ * @param {*} data user input
+ * @returns license section
+ */
 function renderLicenseSection(data) {
   if (data.license !== '') {
   return `\n## License`;
@@ -49,8 +59,11 @@ function renderLicenseSection(data) {
   }
 }
 
-
-// TODO: Create a function to generate markdown for README
+/**
+ * Function to generate markdown for README
+ * @param {*} data user input
+ * @returns README.md template
+ */
 function generateMarkdown(data) {
 
   let tempToC = `\n## Table of Contents`;
